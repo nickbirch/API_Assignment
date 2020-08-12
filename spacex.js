@@ -10,20 +10,20 @@ let missionDataLength;
 // Event listener for form submission
 inputForm.addEventListener('submit', getData);
 
+fetch(launchHistory)
+  .then(result => {
+    return result.json();
+  })
+  .then(data => {
+    missionDataLength = data.length;
+  })
+  .catch(err => console.log(err));
+
 async function getData(e) {
     e.preventDefault();
     while (section.firstChild) {
         section.removeChild(section.firstChild);
     }
-    fetch(launchHistory)
-  .then((result) => {
-    return result.json();
-  })
-  .then((data) => {
-    missionDataLength = data.length;
-    // console.log(missionDataLength);
-  })
-  .catch((err) => console.log(err));
 
   for (let i = missionDataLength - 1; i >= missionDataLength - select.value; i--) {
     // First, call the Mission API
@@ -33,7 +33,7 @@ async function getData(e) {
       })
       .then((data) => {
         missionData = data;
-        console.log(missionData);
+        //console.log(missionData);
         let launchpadId = missionData[i].launchpad;
         let launchpadQueryById = `${urlBase}launchpads/${launchpadId}`;
 
