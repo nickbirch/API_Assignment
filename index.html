@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Challenge #1 - Space X</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="spacex.css">
+</head>
+<body>
+        <!-- Jumbotron  -->
+    <section id="landing-section">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">SpaceX Mission History</h1>
+          <p class="lead">
+            Info on the latest SpaceX flight missions
+          </p>
+        </div>
+      </div>
+    </section>
+<div class = "container">
+    <p>Choose how many missions you want to see:</p>
+    <form>
+    <label for="number">Choose a number:</label>
+    <select name="number" id="number">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+        <option value=9>9</option>
+        <option value=10>10</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
+</div>
+
+<br><br>
+    
+    <!--Results From Request-->
+    <div class="container">
+        <section id="results">
+
+        </section>
+    </div>
+    <script src="spacex.js"></script>
+</body>
+</html>

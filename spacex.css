@@ -1,0 +1,18 @@
+.jumbotron {
+    background: url('assets/76923_USASpaceX_1587156063102.jpeg') no-repeat center;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    font-family:'Trebuchet MS';
+}
+
+img {
+    padding: 5%;
+    max-height: 600px;
+
+}
+
+#date {
+    line-height: 1;
+    font-style: italic;
+}
